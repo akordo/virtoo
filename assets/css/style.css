@@ -64,7 +64,7 @@ section {
 #home h1 {
     padding-top: 80px;
     font-weight: 900;
-    font-size: 100px;
+    font-size: 8rem;
     font-family: 'Browallia New';
 }
 /*SMPLE CLASS TO ADJUST SECTION PADDING & HEIGHT*/
@@ -92,7 +92,7 @@ section {
     min-height: 400px;
     /*background: rgba(35, 133, 161,0.9);*/
     background: rgba(0, 0, 0, 0.3);
-    font-size: 40px;
+    font-size: 3em;
     padding-bottom: 140px;
     padding-top: 140px;
 }
@@ -133,7 +133,7 @@ section {
 
 #video-sec h1 {
     padding-top: 80px;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 900;
     padding-bottom: 30px;
 }
@@ -167,7 +167,7 @@ section {
 
 footer {
     padding: 20px;
-    font-size: 15px;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: 900;
     /*background-color: rgb(35, 133, 161);*/
