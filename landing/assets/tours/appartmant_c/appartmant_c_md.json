@@ -1,0 +1,121 @@
+{
+    "default": {
+        "firstScene": "livingroom",
+        "sceneFadeDuration": 3000,
+        "autoLoad": false
+    },
+
+    "scenes": {    
+        "livingroom": {
+            "title": "Living Room",
+            "pitch": -17,
+            "yaw": 69,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "md/room_1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": -112,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Bedroom",
+                    "sceneId": "bedroom",
+                    "targetPitch": -28,
+                    "targetYaw": -71
+                    
+                },
+                
+                {
+                    "pitch": -6,
+                    "yaw": -63,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Bathroom",
+                    "sceneId": "bathroom",
+                    "targetPitch": -7,
+                    "targetYaw": 49
+                    
+                },
+                
+                {
+                    "pitch": -7,
+                    "yaw": 5,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Kitchen",
+                    "sceneId": "kitchen",
+                    "targetPitch": -8,
+                    "targetYaw": 145
+                }
+            ]
+        },
+       
+        "bedroom": {
+            "title": "Bed Room",
+            "pitch": -8,
+            "yaw": -83,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "md/room_4.jpg",
+            "hotSpots": [
+               
+                {
+                    "pitch": -11,
+                    "yaw": 68,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Living Room",
+                    "sceneId": "livingroom",
+                    "targetPitch": -17,
+                    "targetYaw": -69
+                }
+            ]
+        },
+       
+        "bathroom": {
+            "title": "Bath Room",
+            "pitch": -7,
+            "yaw": 88,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "md/room_3.jpg",
+            "hotSpots": [
+                
+                {
+                    "pitch": -6,
+                    "yaw": -163,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Living Room",
+                    "sceneId": "livingroom",
+                    "targetPitch": -8,
+                    "targetYaw": -124
+                }
+            ]
+        },
+
+        "kitchen": {
+            "title": "Kitchen",
+            "pitch": -19,
+            "yaw": 141,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "md/room_2.jpg",
+            "hotSpots": [
+                
+                {
+                    "pitch": -2,
+                    "yaw": -125,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Living Room",
+                    "sceneId": "livingroom",
+                    "targetPitch": -6,
+                    "targetYaw": -67
+                    
+                }
+            ]
+        }
+    }
+}
