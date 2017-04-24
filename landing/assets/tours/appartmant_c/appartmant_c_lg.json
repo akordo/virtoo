@@ -12,7 +12,7 @@
             "yaw": 69,
             "hfov": 120,
             "type": "equirectangular",
-            "panorama": "lg/room_1.jpg",
+            "panorama": "lg/room_1.JPG",
             "hotSpots": [
                 {
                     "pitch": -2,
@@ -57,7 +57,7 @@
             "yaw": -83,
             "hfov": 120,
             "type": "equirectangular",
-            "panorama": "lg/room_4.jpg",
+            "panorama": "lg/room_4.JPG",
             "hotSpots": [
                
                 {
@@ -79,7 +79,7 @@
             "yaw": 88,
             "hfov": 120,
             "type": "equirectangular",
-            "panorama": "lg/room_3.jpg",
+            "panorama": "lg/room_3.JPG",
             "hotSpots": [
                 
                 {
@@ -101,7 +101,7 @@
             "yaw": 141,
             "hfov": 120,
             "type": "equirectangular",
-            "panorama": "lg/room_2.jpg",
+            "panorama": "lg/room_2.JPG",
             "hotSpots": [
                 
                 {

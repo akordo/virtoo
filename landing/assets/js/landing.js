@@ -45,10 +45,9 @@
 
 
 function getTourFrame(tourId){
-    
-    var tourBase = '<iframe width="100%" height="70%" allowfullscreen style="border-style:none;" src="/pannellum_cust/standalone/pannellum.htm?config=/landing/assets/tours/'
-    var tourSpec = tourId + '/' + tourId + '_' + getTourSize() + '.json"></iframe>';  
-
+    var urlBase = 'https://akordo.github.io/virtoo';
+    var tourBase = '<iframe width="100%" height="70%" allowfullscreen style="border-style:none;" src="'+urlBase+'/pannellum_cust/standalone/pannellum.htm?';
+    var tourSpec = 'config='+urlBase+'/landing/assets/tours/' + tourId + '/' + tourId + '_' + getTourSize() + '.json"></iframe>';  
     return tourBase + tourSpec    
 
 }
