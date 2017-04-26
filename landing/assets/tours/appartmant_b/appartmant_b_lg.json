@@ -1,0 +1,120 @@
+{
+    "default": {
+        "firstScene": "livingroom",
+        "sceneFadeDuration": 3000,
+        "autoLoad": false
+    },
+
+    "scenes": {    
+        "livingroom": {
+            "title": "Living Room",
+            "pitch": -9,
+            "yaw": -54,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "lg/room_1.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": -96,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Bathroom",
+                    "sceneId": "bathroom",
+                    "targetPitch": -13,
+                    "targetYaw": 106
+                    
+                },
+                
+                {
+                    "pitch": -6,
+                    "yaw": -63,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Master Bedroom",
+                    "sceneId": "masterBedroom",
+                    "targetPitch": -19,
+                    "targetYaw": -4
+                    
+                }
+            ]
+        },
+       
+        "bathroom": {
+            "title": "Bathroom",
+            "pitch": -13,
+            "yaw": 106,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "lg/room_2.jpg",
+            "hotSpots": [
+                
+                {
+                    "pitch": -6,
+                    "yaw": -105,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Living Room",
+                    "sceneId": "livingroom",
+                    "targetPitch": -6,
+                    "targetYaw": 154
+                }
+            ]
+        },
+
+        "masterBedroom": {
+            "title": "Master Bedroom",
+            "pitch": -8,
+            "yaw": -83,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "lg/room_3.jpg",
+            "hotSpots": [
+               
+                {
+                    "pitch": -5,
+                    "yaw": -172,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Small Bedroom",
+                    "sceneId": "smallBedroom",
+                    "targetPitch": -21,
+                    "targetYaw": -18
+                },
+                {
+                    "pitch": -13,
+                    "yaw": -137,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Living Room",
+                    "sceneId": "livingroom",
+                    "targetPitch": -12,
+                    "targetYaw": 27
+                }
+            ]
+        },
+       
+        "smallBedroom": {
+            "title": "Small Bedroom",
+            "pitch": -19,
+            "yaw": 141,
+            "hfov": 120,
+            "type": "equirectangular",
+            "panorama": "lg/room_4.jpg",
+            "hotSpots": [
+                
+                {
+                    "pitch": -6,
+                    "yaw": -162,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Master Bedroom",
+                    "sceneId": "masterBedroom",
+                    "targetPitch": -6,
+                    "targetYaw": -98
+                    
+                }
+            ]
+        }
+    }
+}
