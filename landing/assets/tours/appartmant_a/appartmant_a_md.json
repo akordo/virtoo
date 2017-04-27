@@ -1,5 +1,6 @@
 {
     "default": {
+        
         "firstScene": "livingroom",
         "sceneFadeDuration": 2000,
         "autoLoad": false
