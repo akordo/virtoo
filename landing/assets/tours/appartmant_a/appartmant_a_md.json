@@ -164,7 +164,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_2.jpg",
+            "panorama": "lg/room_2.JPG",
             "hotSpots": [
                 {   
                     "sceneId": "livingroom",
