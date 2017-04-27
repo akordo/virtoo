@@ -17,7 +17,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_1.JPG",
+            "panorama": "md/room_1.JPG",
             "hotSpots": [
                 {   
                     "sceneId": "bedRoom1",
@@ -81,7 +81,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_3.JPG",
+            "panorama": "md/room_3.JPG",
             "hotSpots": [  
                 {
                     "pitch": -20,
@@ -106,7 +106,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_4.JPG",
+            "panorama": "md/room_4.JPG",
             "hotSpots": [ 
                 {   
                     "sceneId": "livingroom",
@@ -136,7 +136,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_5.JPG",
+            "panorama": "md/room_5.JPG",
             
             "hotSpots": [
                 {   
@@ -164,7 +164,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_2.JPG",
+            "panorama": "md/room_2.JPG",
             "hotSpots": [
                 {   
                     "sceneId": "livingroom",
@@ -204,7 +204,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_6.JPG",
+            "panorama": "md/room_6.JPG",
             "hotSpots": [
                 {
                     "sceneId": "kitchen",
