@@ -1,7 +1,7 @@
 {
     "default": {
         "firstScene": "livingroom",
-        "sceneFadeDuration": 3000,
+        "sceneFadeDuration": 2000,
         "autoLoad": false
     },
 
@@ -10,6 +10,8 @@
             "title": "Living Room",
             "pitch": -17,
             "yaw": 69,
+            "minPitch": -60,
+            "maxPitch": 60,
             "hfov": 120,
             "type": "equirectangular",
             "panorama": "lg/room_1.JPG",
@@ -55,6 +57,8 @@
             "title": "Bed Room",
             "pitch": -8,
             "yaw": -83,
+            "minPitch": -60,
+            "maxPitch": 60,
             "hfov": 120,
             "type": "equirectangular",
             "panorama": "lg/room_4.JPG",
@@ -77,6 +81,8 @@
             "title": "Bath Room",
             "pitch": -7,
             "yaw": 88,
+            "minPitch": -60,
+            "maxPitch": 60,
             "hfov": 120,
             "type": "equirectangular",
             "panorama": "lg/room_3.JPG",
@@ -99,6 +105,8 @@
             "title": "Kitchen",
             "pitch": -19,
             "yaw": 141,
+            "minPitch": -60,
+            "maxPitch": 60,
             "hfov": 120,
             "type": "equirectangular",
             "panorama": "lg/room_2.JPG",
