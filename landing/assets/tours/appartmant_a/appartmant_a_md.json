@@ -136,7 +136,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_5.jpg",
+            "panorama": "lg/room_5.JPG",
             
             "hotSpots": [
                 {   
@@ -204,7 +204,7 @@
             "hfov": 120,
 
             "type": "equirectangular",
-            "panorama": "lg/room_6.jpg",
+            "panorama": "lg/room_6.JPG",
             "hotSpots": [
                 {
                     "sceneId": "kitchen",
