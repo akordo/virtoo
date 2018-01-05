@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SN Monitor Personal</title>
+</head>
+
+  <body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div id="user_name" class="panel-heading"></div>
+            <div class="panel-body">
+                <ul id="workers" class="list-group">
+                    <li class="list-group-item active">Workers</a>
+                </ul>
+                <ul id="balance" class="list-group">
+                    <li class="list-group-item active">Balance</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+<script>
+    var API_KEY = '9a2728dad1ec90edda059b70877652a3c58e1529716a54a8445382d634131f4d';
+    var BASE_URL = 'https://zen.suprnova.cc/index.php?page=api&action=';
+
+    $(document).ready(function() {
+        getWorkersFromServer();
+        getBalanceFromServer();
+    });   
+
+    function getWorkersFromServer(){
+        let url = BASE_URL + 'getuserworkers' + '&api_key=' + API_KEY;
+        $.ajax({
+            url: url,
+            dataType: 'jsonp',
+            jsonpCallback: 'setWorkers'    
+        });
+    }
+
+    function getBalanceFromServer(){
+        let url = BASE_URL + 'getuserbalance' + '&api_key=' + API_KEY;
+        $.ajax({
+            url: url,
+            dataType: 'jsonp',
+            jsonpCallback: 'setBalance'    
+        });
+    }
+
+
+    function setWorkers(response){
+        if(response){
+            for(let i=0; i<response.getuserworkers.data.length;i++){
+                let dateElement = response.getuserworkers.data[i];
+                let userNameAndworkerName =  dateElement.username.split('.');
+                let userName = userNameAndworkerName[0];
+                if(i===0){
+                    $('#user_name').text(userName);
+                }
+                let workerName = userNameAndworkerName[1];
+                let hashRate = ((dateElement.hashrate/1000).toFixed(0))/1;
+                addWorkerListElement(workerName,hashRate);
+            }
+        }    
+    }
+
+    function setBalance(response){
+            if(response){
+                let confirmedValue = response.getuserbalance.data.confirmed;
+                let unconfirmedValue = response.getuserbalance.data.unconfirmed;
+                addBalanceListElement('Confirmed',confirmedValue);
+                addBalanceListElement('Unconfirmed',unconfirmedValue);
+            } else {
+                alert('No response from server!')
+            }
+    }
+
+    function addBalanceListElement(balanceType,balanceValue){
+        $('#balance').append('<li class="list-group-item">'+balanceType+'<span class="badge">'+balanceValue+'</span></li>');     
+    }
+
+    function addWorkerListElement(workerName,hashRate){
+        if(hashRate>0){
+            $('#workers').append('<li class="list-group-item list-group-item-success">'+ workerName + '<span class="badge">'+ hashRate + '</span></li>');
+        } else {
+            $('#workers').append('<li class="list-group-item list-group-item-danger">'+ workerName + '<span class="badge">'+ hashRate + '</span></li>');
+        }
+    }
+</script>
+
+<style>
+        html,body{
+            padding: 10px;
+            font-family: 'Roboto', sans-serif !important;
+            background-color: #333;
+        }
+        .badge {
+            background-color: inherit;
+            color: inherit;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        .panel {
+            border-radius: 0px;
+            border: 0px !important;
+        }
+
+        .panel-body{
+            background: #222 !important;
+        }
+
+        .list-group-item{
+            border-radius: 0px !important;
+        }
+
+        .panel-heading {
+            border-radius: 0px;
+            color: whitesmoke !important;
+            border-bottom: 1px solid #222 !important;
+            box-shadow: 0 1px 0 #262626;
+            background-color: #191919;
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#282828),to(#191919));
+            background-image: -webkit-linear-gradient(top,#282828,#191919);
+            background-image: linear-gradient(top,#282828,#191919);
+            background-repeat: no-repeat;
+        }
+    </style>
